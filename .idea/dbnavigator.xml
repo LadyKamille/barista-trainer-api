@@ -23,18 +23,27 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes />
+    <loaded-nodes>
+      <connection connection-id="b8ca7116-5e94-4346-b6a5-7ab47544fb03">
+        <schema name="main" object-types="view, index, dataset trigger, column, constraint, table" />
+      </connection>
+    </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="3ea28d4f-5755-480c-8adf-f993cd5e2f99">
-      <console name="Connection" type="STANDARD" schema="" session="Main" />
+    <connection id="b8ca7116-5e94-4346-b6a5-7ab47544fb03">
+      <console name="Barista" type="STANDARD" schema="main" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
-    <connection id="3ea28d4f-5755-480c-8adf-f993cd5e2f99" />
+    <connection id="b8ca7116-5e94-4346-b6a5-7ab47544fb03" />
+  </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="b8ca7116-5e94-4346-b6a5-7ab47544fb03" dataset="main.coffees" active-filter-id="c36c0629-0b8b-4160-a8f0-51dcee31172c">
+      <filter id="c36c0629-0b8b-4160-a8f0-51dcee31172c" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND" />
+    </filter-actions>
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -62,21 +71,24 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="3ea28d4f-5755-480c-8adf-f993cd5e2f99" active="true">
+      <connection id="b8ca7116-5e94-4346-b6a5-7ab47544fb03" active="true">
         <database>
-          <name value="Connection" />
+          <name value="Barista" />
           <description value="" />
-          <database-type value="POSTGRES" />
+          <database-type value="SQLITE" />
           <config-type value="BASIC" />
-          <database-version value="9999.0" />
+          <database-version value="3.3" />
           <driver-source value="BUILTIN" />
           <driver-library value="" />
           <driver value="" />
-          <url-type value="DATABASE" />
+          <url-type value="FILE" />
           <host value="localhost" />
-          <port value="5432" />
-          <database value="postgres" />
-          <type value="USER_PASSWORD" />
+          <port value="1234" />
+          <database value="database" />
+          <files>
+            <file path="$PROJECT_DIR$/db/development.sqlite3" schema="main" />
+          </files>
+          <type value="NONE" />
           <user value="" />
           <deprecated-pwd value="" />
         </database>

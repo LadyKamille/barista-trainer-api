@@ -50,6 +50,7 @@
     <orderEntry type="library" scope="PROVIDED" name="ffi (v1.13.1, rbenv: 2.7.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalid (v0.4.2, rbenv: 2.7.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="graphiql-rails (v1.7.0, rbenv: 2.7.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="graphql (v1.11.6, rbenv: 2.7.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v1.8.5, rbenv: 2.7.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="listen (v3.3.3, rbenv: 2.7.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="loofah (v2.8.0, rbenv: 2.7.2) [gem]" level="application" />
@@ -99,6 +100,14 @@
         <option value="channel" />
         <option value="controller" />
         <option value="generator" />
+        <option value="graphql:enum" />
+        <option value="graphql:install" />
+        <option value="graphql:interface" />
+        <option value="graphql:loader" />
+        <option value="graphql:mutation" />
+        <option value="graphql:object" />
+        <option value="graphql:scalar" />
+        <option value="graphql:union" />
         <option value="integration_test" />
         <option value="job" />
         <option value="mailbox" />
@@ -133,6 +142,14 @@
         <option value="channel" />
         <option value="controller" />
         <option value="generator" />
+        <option value="graphql:enum" />
+        <option value="graphql:install" />
+        <option value="graphql:interface" />
+        <option value="graphql:loader" />
+        <option value="graphql:mutation" />
+        <option value="graphql:object" />
+        <option value="graphql:scalar" />
+        <option value="graphql:union" />
         <option value="integration_test" />
         <option value="job" />
         <option value="mailbox" />
@@ -403,6 +420,18 @@
             </subtasks>
           </RakeTaskImpl>
           <RakeTaskImpl description="" fullCommand="environment" id="environment" />
+          <RakeTaskImpl id="graphql">
+            <subtasks>
+              <RakeTaskImpl description="" fullCommand="graphql:upgrade" id="upgrade" />
+              <RakeTaskImpl id="upgrade">
+                <subtasks>
+                  <RakeTaskImpl description="" fullCommand="graphql:upgrade:create_base_objects" id="create_base_objects" />
+                  <RakeTaskImpl description="" fullCommand="graphql:upgrade:member" id="member" />
+                  <RakeTaskImpl description="" fullCommand="graphql:upgrade:schema" id="schema" />
+                </subtasks>
+              </RakeTaskImpl>
+            </subtasks>
+          </RakeTaskImpl>
           <RakeTaskImpl description="" fullCommand="initializers" id="initializers" />
           <RakeTaskImpl description="" fullCommand="notes" id="notes" />
           <RakeTaskImpl id="notes">
