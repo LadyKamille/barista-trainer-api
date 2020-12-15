@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  roast: one
+  roasted_on: 2020-12-14 23:57:37
+  grind: one
+  tasting_notes: one
+
+two:
+  name: MyString
+  roast: two
+  roasted_on: 2020-12-14 23:57:37
+  grind: two
+  tasting_notes: two
