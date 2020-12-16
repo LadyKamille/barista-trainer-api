@@ -9,7 +9,7 @@ class Mutations::CreateCoffee < Mutations::BaseMutation
   field :errors, [String], null: false
 
   def resolve(name:, grind_id: nil, roast_id: nil, roasted_on: nil, tasting_notes_id: nil)
-    coffee = Coffee.new(
+    coffee = Coffee.create!(
       name: name,
       grind_id: grind_id,
       roast_id: roast_id,

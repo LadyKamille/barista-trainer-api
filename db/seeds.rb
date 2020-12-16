@@ -15,8 +15,17 @@ Roast.create(name: 'Dark')
 Grind.create(name: 'Coarse')
 Grind.create(name: 'Medium')
 Grind.create(name: 'Fine')
+Grind.create(name: 'Whole')
 
 # Create basic Tasting Notes
 TastingNote.create(name: 'Chocolate')
 TastingNote.create(name: 'Caramel')
 TastingNote.create(name: 'Nutty')
+
+Coffee.create(
+  name: "Bandit",
+  grind_id: 1,
+  roast_id: 1,
+  roasted_on: "2020-12-15T06:42:10.492Z",
+  tasting_notes_id: 1,
+)
