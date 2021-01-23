@@ -4,7 +4,11 @@ class Resolvers::AllUsers < GraphQL::Schema::Resolver
   description 'Returns all users'
 
   def resolve
-    User.all
+    if context[:current_user].admin?
+      User.all
+    else
+      false
+    end
   end
 
 end
