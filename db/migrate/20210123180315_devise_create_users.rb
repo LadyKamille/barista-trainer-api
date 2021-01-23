@@ -3,6 +3,13 @@
 class DeviseCreateUsers < ActiveRecord::Migration[6.0]
   def change
     create_table :users do |t|
+      ## General
+      t.string   'first_name',     null: false, default: ''
+      t.string   'last_name',      null: false, default: ''
+
+      # role attributes (used as enum in user model)
+      t.integer  :role, default: 0, null: false
+
       ## Database authenticatable
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""

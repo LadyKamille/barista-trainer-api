@@ -2,8 +2,8 @@ module Types
   class UserType < GraphQL::Schema::Object
     field :id, ID, null: true
     field :name, String, null: true
-    field :firstName, String, null: true
-    field :lastName, String, null: true
+    field :first_name, String, null: true
+    field :last_name, String, null: true
     field :email, String, null: true
     field :token, String, null: true
     field :created_at, GraphQL::Types::ISO8601DateTime, null: true
