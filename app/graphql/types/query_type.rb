@@ -59,5 +59,13 @@ module Types
     def tasting_note(id:)
       TastingNote.find(id)
     end
+
+    # Users
+    # For getting info about the current user
+    field :me, resolver: Resolvers::Me
+    field :all_users, Types::UserType.connection_type, null: false, resolver: Resolvers::AllUsers
+    field :user_by_id, UserType, null: true, resolver: Resolvers::UserById do
+      argument :id, ID, required: true
+    end
   end
 end

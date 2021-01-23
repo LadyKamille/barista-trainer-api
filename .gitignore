@@ -33,3 +33,7 @@
 
 # IDE Files
 .idea/*
+.DS_Store
+
+# Env for app secrets
+app_env.rb
