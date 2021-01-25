@@ -22,6 +22,8 @@ class User < ApplicationRecord
   validates :first_name, presence: true, length: { maximum: 255 }
   validates :last_name, presence: true, length: { maximum: 255 }
 
+  after_initialize :setup_new_user, if: :new_record?
+
   def name
     [first_name, last_name].join(' ').strip
   end
